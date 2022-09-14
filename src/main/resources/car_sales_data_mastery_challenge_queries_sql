@@ -23,3 +23,24 @@ REFERENCES `CarSales`.`SalesPerson` (`Sales_ID`);
 ON DELETE NO ACTION
 ON UPDATE NO ACTION;
 
+
+-- add the rows given in the LMS slide
+INSERT INTO `CarSales`.`Customer` VALUE(2001, 'Hoffman', 'Anny', 'London', 100, 1001);
+INSERT INTO `Customer` VALUE(2002, 'Giovanni', 'Jenny', 'Rome', 200, 1003);
+INSERT INTO `Customer` VALUE(2003, 'Liu', 'William', 'San Jose', 100, 1002);
+INSERT INTO `Customer` VALUE(2004, 'Harry', 'Grass', 'Berlin', 300, 1002);
+INSERT INTO `Customer` VALUE(2005, 'Clemens', 'John', 'London', 200, 1001);
+INSERT INTO `Customer` VALUE(2006, 'Fanny', 'John', 'San Jose', 200, 1005);
+INSERT INTO `Customer` VALUE(2007, 'Jonathan', 'Bob', 'Rome', 300, 1004);
+
+
+-- create the Order table
+CREATE TABLE IF NOT EXISTS `Order`(
+`Order_ID` int NOT NULL,
+`Amount` int NOT NULL,
+`Order_Date` varchar(20) NOT NULL,
+`Customer_ID` int NOT NULL
+);
+
+
+-
