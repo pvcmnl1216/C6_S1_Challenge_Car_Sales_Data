@@ -67,3 +67,16 @@ CREATE TABLE IF NOT EXISTS `Order`(
  -- delete all SalesPerson whose CommissionRate is 0.
  DELETE FROM salesperson where sales_Id = 1008;
 
+
+ -- update the order where amount is 100,Set the amount to 200
+ UPDATE carsales.order SET AMOUNT = 200 WHERE order_Id=3002;
+ UPDATE carsales.order SET AMOUNT = 200 WHERE order_Id=3010;
+
+
+ -- Update the commission rate for the salesperson whose commission rate is 26. Set the commission rate to 28.
+ UPDATE carsales.salesperson SET commission_Rate = 28 WHERE sales_Id = 1005;
+
+
+ -- Update the rating for the customers whose rating is 100 and set it as 150.
+ UPDATE carsales.customer SET rating = 150 WHERE customer_Id = 2001;
+ UPDATE carsales.customer SET rating = 150 WHERE customer_Id = 2003;
