@@ -59,3 +59,7 @@ CREATE TABLE IF NOT EXISTS `Order`(
  ON DELETE NO ACTION
  ON UPDATE NO ACTION;
 
+
+ -- delete the order details of OrderID 3008 from the Order table
+ DELETE FROM carsales.order WHERE order_Id = 3008;
+
