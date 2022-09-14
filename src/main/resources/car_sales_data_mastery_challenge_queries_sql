@@ -1,0 +1,10 @@
+create the Customer table
+CREATE TABLE IF NOT EXISTS `Customer`(
+`CustomerID` int NOT NULL,
+`First_Name` varchar(40) NOT NULL,
+`Last_Name` varchar(40) NOT NULL,
+`City` varchar(20) NOT NULL,
+`Rating` int NOT NULL,
+`Sales_ID` int NOT NULL
+);
+
