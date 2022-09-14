@@ -63,3 +63,7 @@ CREATE TABLE IF NOT EXISTS `Order`(
  -- delete the order details of OrderID 3008 from the Order table
  DELETE FROM carsales.order WHERE order_Id = 3008;
 
+
+ -- delete all SalesPerson whose CommissionRate is 0.
+ DELETE FROM salesperson where sales_Id = 1008;
+
