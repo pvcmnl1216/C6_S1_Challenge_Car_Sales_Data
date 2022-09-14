@@ -8,3 +8,18 @@ CREATE TABLE IF NOT EXISTS `Customer`(
 `Sales_ID` int NOT NULL
 );
 
+
+-- make the CustomerID as the primary key
+ALTER TABLE `CarSales`.`Customer` ADD PRIMARY KEY (`CustomerID`);
+;
+
+
+-- make the SalesID as the foreign key
+ALTER TABLE `CarSales`.`Customer` ALTER INDEX `Sales_ID` VISIBLE;
+ALTER TABLE `CarSales`.`Customer`
+ADD CONSTRAINT `Sales_ID`
+FOREIGN KEY (`Sales_ID`)
+REFERENCES `CarSales`.`SalesPerson` (`Sales_ID`);
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
