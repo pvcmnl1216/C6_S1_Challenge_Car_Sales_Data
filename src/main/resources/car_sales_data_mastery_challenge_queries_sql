@@ -43,4 +43,19 @@ CREATE TABLE IF NOT EXISTS `Order`(
 );
 
 
--
+-- make the OrderID as the primary key
+ ALTER TABLE `CarSales`.`Order` ADD PRIMARY KEY (`Order_ID`);
+ ;
+
+
+ -- make the CustomerID as foreign key
+ ALTER TABLE `CarSales`.`order`
+ ADD INDEX `Customer_ID` (`Customer_ID` ASC) VISIBLE;
+ ;
+ ALTER TABLE `CarSales`.`Order`
+ ADD CONSTRAINT `Customer_ID`
+ FOREIGN KEY (`Customer_ID`)
+ REFERENCES `CarSales`.`Customer` (`CustomerID`)
+ ON DELETE NO ACTION
+ ON UPDATE NO ACTION;
+
